@@ -1,0 +1,262 @@
+
+
+
+.home_top_gainer_card{
+    margin:10px;
+}
+.home_all_top_picks{
+    float:right; 
+}
+
+.home_buy_button{
+    margin-top:5px;
+}
+
+
+
+.home_top_gainer_card .card-body{
+  padding:0px !important;
+  color: #06060E;
+   font-weight: 30 0;
+   font-weight:bold;
+}
+
+.card.col-md-1.home_top_gainer_card.shadow:hover{
+   background:#EBEBEB;
+
+}
+
+
+/*Top Pick Final */
+.home_top_gainer_card {
+    margin: 10px 16px 0 26px;
+}
+    
+.top-picks-title{
+
+ color: #06060E;
+ font-weight: bold;
+}
+.top_pick_parent{
+padding: 10px;
+
+}
+
+
+.top_gainer_body{
+margin: 10px 0px 10px 4px;
+}
+.home_top_gainer_card  .icon {
+ float: left;
+ width: 50px;
+ height: 50px;
+ background: #f7f7f7;
+ border-radius: .55rem;
+}
+
+.top_gainer_icon{
+ height: 50px;
+ width: 50px;   
+}
+
+.profit_loss_percentage{
+  float:right  ;
+  font-size: 12px;
+ font-weight: bolder;
+}
+
+.coin-title{
+  float:left;
+ margin: 1px 0 0 20px;
+}
+span.current_price {
+ float: right;
+ font-size: 18px;
+}
+
+.card.home_top_gainer_card:hover{
+border-color:#3297f8  ;
+}
+/* Top Pick */
+
+/*Funding deal */
+
+.home-page-widget-title{
+margin: 22px 0 0 28px;
+font-weight:bold;
+}
+
+.table-responsive{
+display: inline-table;
+}
+table tr{
+text-align: left;
+font-size:14px;
+}
+.funding_deal_title_row{
+background: #EBEBEB;
+ font-weight: bold;
+ text-align: center;
+ text-align: left;
+ padding:10px;
+
+}
+
+.cryototable > tr:hover{
+box-shadow: 2px 0px 0px 1px #b8b8b8 inset;
+}
+
+
+img.funding_deal_icon {
+ height: 35px;
+}
+/* */
+
+
+/* Top stories */
+.top_stories_image img {
+ height: 100px;
+ float: left;
+}
+.top_stories_span_t{
+width:100%;
+padding: 5px; 
+}
+
+.top_stories_title{
+text-align:center;
+}
+span.top_stories_article {
+ text-align: center;
+}
+/* */
+
+
+.home_crypto_compannies > .figure{
+   margin:10px;
+}
+
+.home_crypto_compannies > div > h4{
+ text-align: center;
+ padding: 5px;
+}
+
+
+a{
+ cursor:pointer;
+}
+hr {
+ border: 0;
+ clear: both;
+ display: block;
+ width: 96%;
+ background-color: #ccccc9;
+ height: 3px;
+}
+
+
+
+/*awards */
+img.award_img {
+ height: 150px;
+ padding:5px;
+}
+.awards_list{
+background-color:#06060E;
+padding: 10px;
+}
+
+.award_group {
+    display: inline-block;
+    text-align: center;
+}
+img.home-award {
+ 
+   padding: 17px;
+     margin-left: 26px;
+     height: 200px;
+     background: black;
+  /*   background-repeat: no-repeat;
+    background-position: center;
+     border-radius: 136px; 
+    background-size: 241px 198px; */
+}
+
+
+
+
+.container.popup {
+   
+    position: fixed;
+    height: 500px;
+    top: 40%;
+    left: 40%;
+margin-top: -100px; /* Negative half of height. */
+margin-left: -250px; /* Negative half of width. */
+border: 1px solid lightgray;
+background-color: white;
+z-index: 1000000;
+ 
+}
+
+
+img.popup-home {
+    width: 500px;
+ }
+
+input.newsletter-popup-input {
+    height: 35px;
+    border-radius: 7px;
+    border: 1px solid gray;
+    padding: 2px;
+    width: 400px;
+}
+
+button.btn.btn-primary.newsletter-popup-button {
+    border-radius: 10px;
+    height: 35px;
+}
+
+
+.domains_title{
+    position: absolute;
+    width: 79%;
+    bottom: 81px;
+    background-color: white;
+}
+h5.card-title.crypto-text-color-blue.domains_title {
+    border: 2px solid;
+    border-radius: 11px;
+    padding: 10px;
+}
+
+.domain-mini-title{
+    font-weight: bold !important;
+    font-size:14px !important;
+   
+}
+
+.domains_card {
+    padding: 10px;
+    border: none;
+}
+
+
+.domain-buy-btton-link {
+    float: right;
+}
+
+span.domain-mini-title.fa.fa-bars.text-success {
+    margin-left: 3px;
+}
+span.domain-mini-title.fa.fa-bars{
+float:left;
+padding:5px;
+
+}
+
+
+.body-blur{
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+} 

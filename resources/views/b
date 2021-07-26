@@ -1,0 +1,164 @@
+@extends('layouts.app')
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+@section('content')
+<div class="container align-center">
+    <div class="row text-center ">
+    <div class="col-md-3"> </div>
+        <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">Schedule Appointment</div>
+<?php
+/*date_default_timezone_set('Asia/Kolkata');
+$date = date('m/d/Y h:i:s a', time());
+//echo $date;
+
+
+//echo date("h:i:sa");
+//$addingFiveMinutes= strtotime( $date.' + 60 minute');
+
+$s_time=9;
+$e_time=18;
+
+$slot=13;
+$t_slot=$slot;
+
+
+$t_stime=9;
+$t_etime=18;
+while($t_stime<$e_time){
+    $t_slot=$slot;
+  
+    $mod_r=60%$slot;
+    if($mod_r==0){
+        echo $t_stime." 00 "."</br> ";
+
+
+        while($t_slot<60){
+            echo $t_stime." ".$t_slot."</br> ";
+            $t_slot+=$slot;
+        }
+    
+        $t_stime=$t_stime+1;
+    }else{
+        
+       // echo $t_stime." 00 "."</br> ";
+
+
+        while($t_slot<=60){
+            echo $t_stime." ".$t_slot."</br> ";
+            $t_slot+=$slot;
+        }
+    
+        $t_stime=$t_stime+1;
+    }
+    
+}
+//echo $addingFiveMinutes;
+
+*/
+?>
+            <div class="card-body">
+                <label class="label "> Select Date</label>
+            <input type="date" class="form-control" id="appointment_date" />
+</br>
+         
+            <div class="appointmnets">
+            </div>
+
+            <button class="btn btn-sm btn-primary save">Save</button>
+            </div>
+        </div>
+        </div>
+     
+      
+    </div>
+</div>
+@endsection
+<script>
+
+$(document).ready(function(){
+
+
+
+    var slot;
+    var break_start;
+    var break_duration;
+    $.post("{{route('user.deriveCalender')}}",
+    {
+      _token: "{{ csrf_token() }}",
+     },
+    function(data,status){
+      console.log(data);
+        $(".appointmnets").html(data);
+     // alert("Data: " + data + "\nStatus: " + status);
+    });
+
+
+    $("#appointment_date").change(function () {
+        console.log(this.value);
+        $.post("{{route('user.deriveCalender')}}",
+        {
+            _token: "{{ csrf_token() }}",
+            appointment_date:this.value
+        },function(data,status){
+            console.log(data);
+            $(".appointmnets").html(data);
+
+            var appointments=JSON.parse(data);
+            var appointment_componenet="";
+                console.log("break start",break_start)
+            var hosp_open="9.00am";
+            var hosp_close="6.30pm";
+            var lunch_break=[break_start,break_duration];
+          //  slot=10;
+            var d= [
+                  //  ['1am', '2am'],
+                   // ['3am', '4:01am']
+                ];
+            for(var i=0;i<appointments.length;i++){
+                    d.push([appointments[i].start_time,appointments[i].end_time])
+                   // appointment_componenet+="<button class='btn btn-lg btn-primary' onclick='save("+appointments[i]+")'>"+appointments[i].start_time+"</button>";
+
+                }
+                d.push(lunch_break);
+                d.push(["5.00pm","5.30pm"]);
+            console.log("data",d);
+            $('#schedule').timepicker(
+                {   
+                    'minTime': hosp_open,
+	                'maxTime': hosp_close,
+                     'scrollDefault': 'now',
+                    'step': slot,
+                'disableTimeRanges':d
+               
+            }
+            );
+
+
+        });
+    });
+
+  $(".save").click(function(){
+      
+      console.log($("#schedule").val());
+      console.log($("#schedule").val())
+      
+      /*
+    $.post("",
+    {
+      _token: "{{ csrf_token() }}",
+      start_time:$("#appointment_slot").val(),
+      end_time: $("#break_time").val(),
+      start_at:$("#start_at").val()
+
+    },
+    function(data,status){
+        console.log("data",data);
+     // alert("Data: " + data + "\nStatus: " + status);
+    });
+
+    */
+  });
+});
+</script>

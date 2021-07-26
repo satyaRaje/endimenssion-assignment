@@ -1,0 +1,118 @@
+body , .brand_background{
+    background: #EBEBEB !important;
+  }
+      .header-logo{
+        background:#ebebeb;
+        padding:5px;
+      }
+      .full_scale_menu{
+          width:100%;
+      }
+  
+      .full_scale_menu li{
+         
+          width:11%;
+          padding:5px;  
+          text-align:center;
+          list-style-position:inside;  
+          border-right: white 1px solid;
+      }
+  
+      .full_scale_menu li:hover{
+       background-color: #3197F9;
+       font-weight: bold;
+       padding:5px;
+      }
+      
+
+      .custom_nav_bar_desktop{
+        background-color:#262626;
+        color:white;
+        padding:0px;
+        cursor:pointer;
+        border-bottom: white 5px solid;
+        font-size: 16px;
+      }
+      
+      .custom_nav_bar_desktop a{
+          color:white;
+          display: block;
+      }
+
+      .custom_nav_bar_desktop a:hover{
+        text-decoration: none   ;
+    }
+    
+    .top_logo {
+      padding-left: 60px;
+      padding-top: 5px;
+  }
+      
+      /* footer */
+.desktop_footer{
+    background-color:#262626;
+    color:white;
+  }
+  
+  .footer-font-color{
+    color:white;
+  }
+  .footer-icon {
+    height:100px; 
+    position: absolute;
+    right: -10px;
+    bottom: 0;
+}
+  
+  .footer-links{
+    padding:5px;
+    margin-top: 24px;
+    border-right: 1px solid #3297f8;
+  }
+  
+  .footer-social-media{
+    position: absolute;
+      bottom: 0;
+      left: 15px;
+  }
+  
+  /*
+  .footer-social-media i{
+  margin-right: 7px;
+  font-size: 36px;
+  padding: 7px;
+      border: 1px solid;
+  }
+  */
+  .footer-social-media i{
+  margin-right: 7px;
+      font-size: 36px;
+      color: #3297f8;
+      padding: 7px;
+      border: 1px solid #3297f8;
+      background: white;
+      border-radius: 10px;
+  }
+  .footer_br_tag{
+    height:1px;
+    width: 51%;
+      opacity: 0.3;
+      background-color: #271072;
+  }
+  
+  .footer-menu-title{
+    color:#3297f8;
+    font-size: 16px;
+      font-weight: bold;
+  }
+
+
+
+  /*COmponent */
+.desktop_header_banner{
+ width:100%;
+ height:500px;
+}
+
+
+
